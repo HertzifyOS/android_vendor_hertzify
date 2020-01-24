@@ -125,6 +125,12 @@ TARGET_SCREEN_WIDTH ?= 1080
 TARGET_SCREEN_HEIGHT ?= 1920
 $(call inherit-product, vendor/hertzify/bootanimation/bootanimation.mk)
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images \
+    product_charger_res_images_vendor
+
 # Interfaces
 PRODUCT_PACKAGES += \
     framework_compatibility_matrix.lineage.xml
