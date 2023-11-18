@@ -2,6 +2,10 @@
 PRODUCT_PACKAGES += \
     ExactCalculator
 
+# Cloned app exemption
+PRODUCT_COPY_FILES += \
+    vendor/hertzify/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-hertzify-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-hertzify-product.xml
+
 # Setup Wizard
 PRODUCT_PACKAGES += \
     HertzifySetupWizard
