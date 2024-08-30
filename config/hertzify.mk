@@ -6,6 +6,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/hertzify/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-hertzify-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-hertzify-product.xml
 
+# DeviceAsWebcam
+ifeq ($(TARGET_BUILD_DEVICE_AS_WEBCAM), true)
+    PRODUCT_PACKAGES += \
+        DeviceAsWebcam
+
+    PRODUCT_VENDOR_PROPERTIES += \
+        ro.usb.uvc.enabled=true
+endif
+
 # Setup Wizard
 PRODUCT_PACKAGES += \
     HertzifySetupWizard
