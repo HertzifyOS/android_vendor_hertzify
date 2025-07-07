@@ -649,4 +649,7 @@
 
     <!-- Whether glanceable hub is enabled by default. -->
     <bool name="config_glanceableHubEnabledByDefault">true</bool>
+
+    <!-- If supported, are dreams enabled? (by default) -->
+    <bool name="config_dreamsEnabledByDefault">false</bool>
 </resources>
