@@ -7,6 +7,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 PRODUCT_BRAND ?= HertzifyOS
 WITH_GMS ?= true
 TARGET_ENABLE_BLUR ?= true
+PERF_ANIM_OVERRIDE ?= false
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -276,6 +277,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/hertzify/prebuilt/common/etc/init/init.openssh.rc:$(TARGET_COPY_OUT_PRODUCT)/etc/init/init.openssh.rc
+
+# PERF_ANIM_OVERRIDE
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
 
 # Permissions
 PRODUCT_COPY_FILES += \
