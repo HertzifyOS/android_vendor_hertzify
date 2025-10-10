@@ -282,6 +282,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     persist.sys.activity_anim_perf_override=$(PERF_ANIM_OVERRIDE)
 
+ifeq ($(PERF_ANIM_OVERRIDE),true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    debug.sf.predict_hwc_composition_strategy=0
+endif
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/hertzify/config/permissions/privapp-permissions-hertzify.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-hertzify.xml
