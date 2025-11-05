@@ -8,6 +8,7 @@ PRODUCT_BRAND ?= HertzifyOS
 WITH_GMS ?= true
 TARGET_ENABLE_BLUR ?= true
 PERF_ANIM_OVERRIDE ?= false
+TARGET_ENABLES_IMS_OVERRIDES ?= false
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -255,6 +256,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_r=4 \
     ro.com.google.ime.kb_pad_land_l=64 \
     ro.com.google.ime.kb_pad_land_r=64
+
+# IMS OVERRIDES
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.target_enables_ims_override=$(TARGET_ENABLES_IMS_OVERRIDES) \
 
 # LMOFreeform
 PRODUCT_PACKAGES += \
