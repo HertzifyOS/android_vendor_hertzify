@@ -235,6 +235,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/hertzify/prebuilt/common/bin/wipe-frp.sh:$(TARGET_COPY_OUT_RECOVERY)/root/system/bin/wipe-frp
 
+# GameSpace
+PRODUCT_PACKAGES += \
+    GameSpace
+    
 # Gboard side padding
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.com.google.ime.kb_pad_port_l=4 \
