@@ -6,6 +6,7 @@ $(call inherit-product-if-exists, vendor/extra/product.mk)
 
 PRODUCT_BRAND ?= HertzifyOS
 WITH_GMS ?= true
+TARGET_ENABLE_BLUR ?= true
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -69,6 +70,12 @@ endif
 
 # Audio files
 $(call inherit-product, vendor/hertzify/audio/audio.mk)
+
+# Blur
+ifeq ($(TARGET_ENABLE_BLUR), true)
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.supports_background_blur=1
+endif
 
 # Bootanimation
 $(call inherit-product, vendor/hertzify/config/bootanimation.mk)
