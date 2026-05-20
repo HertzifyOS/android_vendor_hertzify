@@ -18,6 +18,7 @@
 
 existingOTAdevices=./OTA/devices/hertzify.devices
 output="$2/$1.json"
+archive_output="$2/${3%.zip}.json"
 
 # cleanup old file
 if [ -f "$output" ]; then
@@ -54,6 +55,9 @@ echo '{
         }
     ]
 }' >> "$output"
+
+# create archive json copy
+cp "$output" "$archive_output"
 
 cat "$output"
 echo ""
