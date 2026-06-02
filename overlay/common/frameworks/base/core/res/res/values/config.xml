@@ -490,13 +490,6 @@
          should also be non-empty.-->
     <string name="config_rawContactsLocalAccountType" translatable="false">com.android.contacts</string>
 
-    <!-- The array of account types that accounts in any of these can be set as the default account
-         for new raw contacts. -->
-    <string-array name="config_rawContactsEligibleDefaultAccountTypes">
-        <item>com.google</item>
-        <item>at.bitfire.davdroid.address_book</item>
-    </string-array>
-
     <!-- Suppress Intent Filter Verification Service crashes and System UI ANRs (both AOSP bugs) -->
     <string translatable="false" name="config_appsNotReportingCrashes">com.android.statementservice,com.android.systemui,com.google.android.as,com.google.android.tts</string>
 

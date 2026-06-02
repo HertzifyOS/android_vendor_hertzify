@@ -293,6 +293,7 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 PRODUCT_PACKAGES += \
     DocumentsUIOverlay \
+    HertzifyFrameworksOverlay \
     NetworkStackOverlay \
     NfcOverlay \
     PermissionControllerOverlay
