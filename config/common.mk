@@ -189,6 +189,10 @@ PRODUCT_PACKAGES += \
     UpdaterVanillaOverlay
 endif
 
+# AppDataBackup
+PRODUCT_PACKAGES += \
+    AppDataBackup
+    
 # Extra tools
 PRODUCT_PACKAGES += \
     bash \
