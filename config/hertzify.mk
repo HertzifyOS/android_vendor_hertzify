@@ -1,3 +1,7 @@
+# AppDataBackup
+PRODUCT_PACKAGES += \
+    AppDataBackup
+    
 # Caculator
 PRODUCT_PACKAGES += \
     ExactCalculator
