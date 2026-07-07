@@ -300,6 +300,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/hertzify/config/permissions/privapp-permissions-hertzify.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-hertzify.xml
 
+# OverlayFS
+PRODUCT_PACKAGES_DEBUG += \
+    disable-overlays
+
 # rsync
 PRODUCT_PACKAGES += \
     rsync
