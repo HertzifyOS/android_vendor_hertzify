@@ -1,19 +1,11 @@
-# Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_mobile.mk)
+# Inherit common Hertzify stuff
+$(call inherit-product, vendor/hertzify/config/common_mobile.mk)
 
 PRODUCT_SIZE := full
 
-# Include GoogleSansFlex font
-$(call inherit-product-if-exists, external/google-fonts/google-sans-flex/fonts.mk)
-
 # Apps
 PRODUCT_PACKAGES += \
-    Camelot \
-    Etar \
-    Profiles \
-    Recorder \
-    Seedvault \
-    Twelve
+    Seedvault
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
@@ -30,11 +22,6 @@ PRODUCT_PACKAGES += \
     unrar \
     zstd
 
-# Fonts
-PRODUCT_PACKAGES += \
-    fonts_customization.xml \
-    FontGoogleSansFlexOverlay
-
-# Include Lineage LatinIME dictionaries
-PRODUCT_PACKAGE_OVERLAYS += vendor/lineage/overlay/dictionaries
-PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay/dictionaries
+# Include Hertzify LatinIME dictionaries
+PRODUCT_PACKAGE_OVERLAYS += vendor/hertzify/overlay/dictionaries
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/hertzify/overlay/dictionaries
