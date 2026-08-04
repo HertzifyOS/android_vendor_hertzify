@@ -23,11 +23,11 @@ PRODUCT_PACKAGES += \
     HertzifySetupWizard
 
 # Updater
-PRODUCT_PACKAGES += \
-    Updater
+#PRODUCT_PACKAGES += \
+#    Updater
 
-PRODUCT_COPY_FILES += \
-    vendor/hertzify/prebuilt/common/etc/init/init.hertzify-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.hertzify-updater.rc
+#PRODUCT_COPY_FILES += \
+#    vendor/hertzify/prebuilt/common/etc/init/init.hertzify-updater.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.hertzify-updater.rc
 
 # Use a generic profile based boot image by default
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
