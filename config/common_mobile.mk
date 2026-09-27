@@ -22,6 +22,7 @@ endif
 # Apps
 PRODUCT_PACKAGES += \
     AvatarPicker \
+    Gallery2 \
     LatinIME
 
 # Launcher3
