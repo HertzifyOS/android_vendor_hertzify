@@ -45,4 +45,7 @@
 
     <!-- Whether to display Cloned Apps page in Settings (Settings > Apps > Cloned Apps).-->
     <bool name="config_cloned_apps_page_enabled">true</bool>
+
+    <!-- Whether SIM Specific Ringtone should be shown or not. -->
+    <bool name="config_show_sim_specific_ringtone">true</bool>
 </resources>
